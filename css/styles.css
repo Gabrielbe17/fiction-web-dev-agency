@@ -6,6 +6,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root{
     --primary-color:rgb(9, 195, 174);
@@ -210,30 +216,19 @@ header{
 }
 .intro-animation::before{
     content: "";
-    animation: textChanger 8s infinite 2s;
+    /* animation: textChanger 8s infinite 2s; */
+    animation-name: textChanger;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
 }
 /* Text-changer animation */
 @keyframes textChanger {
-    0%{
-        content: "Startups";
-        color: var(--animation-textChanger-color);
-    }
-    25%{
-        content: "Companies";
-        color: var(--animation-textChanger-color);
-    }
-    50%{
-        content: "Individuals";
-        color: var(--animation-textChanger-color);
-    }
-    75%{
-        content: "E-commerce";
-        color: var(--animation-textChanger-color);
-    }
-    100%{
-        content: "Agencies";
-        color: var(--animation-textChanger-color);
-    }
+    0%{content: "Startups"; color: var(--animation-textChanger-color);}
+    25%{content: "Companies"; color: var(--animation-textChanger-color);}
+    50%{content: "Individuals"; color: var(--animation-textChanger-color);}
+    75%{content: "E-commerce"; color: var(--animation-textChanger-color);}
+    100%{content: "Agencies"; color: var(--animation-textChanger-color);}
 }
 /* SVG Image */
 
@@ -336,8 +331,9 @@ header{
     background-color: #13ffe3;
     transform-origin: left;
     transition: transform .9s ease-in-out;
-
-    
+}
+.item__p{
+    font-size: 1.2rem;
 }
 .item:hover::before{
     content: "";
@@ -495,6 +491,11 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.contact__p{
+    text-align: center;
+    font-size: 1.3rem;
+
 }
 .contact__form{
     color: #ddd;
