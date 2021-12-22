@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* General Settings */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*,
 *::before,
 *::after{
     margin: 0;
@@ -26,6 +22,7 @@ html{
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 16px;
 }
 body{
     overflow-x: hidden;
@@ -402,7 +399,7 @@ header{
 }
 
 .card__item{
-    padding: 2rem 6rem;
+    /* padding: 2rem 6rem; */
     background: var(--color-box-1);
 
 }
@@ -516,6 +513,9 @@ header{
 }
 .form__item-input{
     width: 100%;
+}
+textarea{
+    resize: vertical;
 }
 .contact__title{
     margin-bottom: 1rem;
@@ -639,14 +639,14 @@ header{
         font-size: 1.3rem;
         margin-bottom: 2rem;
     }
-    @media screen and (min-width: 489px),(min-height:970px){
+    @media screen and (max-width: 550px),(min-height:970px){
         .container-nav{
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(2, 1fr);
             justify-items: center;
             align-items: center;
-            gap: 10px;
+            gap: 1.3em;
         }
         .logo{
             font-size: 2rem;
@@ -696,6 +696,6 @@ header{
         display: flex;
         flex-direction: column;
     }
-}
+} 
 
 
